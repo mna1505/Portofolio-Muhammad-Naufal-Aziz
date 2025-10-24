@@ -1,0 +1,52 @@
+<!--
+    <section id="projects" class="py-20">
+        <div class="container mx-auto">
+        <h2 class="text-3xl font-bold text-center text-blue-400 mb-4">My Projects</h2>
+        <div class="grid md:grid-cols-3 gap-8 px-6">
+            <div class="card">
+            <img src="https://placehold.co/300x200" class="rounded-lg mb-4">
+            <h3 class="text-xl font-semibold">Website Portfolio</h3>
+            <p class="text-gray-400">A modern responsive portfolio website built with TailwindCSS.</p>
+            </div>
+            <div class="card">
+            <img src="https://placehold.co/300x200" class="rounded-lg mb-4">
+            <h3 class="text-xl font-semibold">Mobile App UI</h3>
+            <p class="text-gray-400">UI/UX concept for social media mobile application.</p>
+            </div>
+            <div class="card">
+            <img src="https://placehold.co/300x200" class="rounded-lg mb-4">
+            <h3 class="text-xl font-semibold">C++ CLI Program</h3>
+            <p class="text-gray-400">Console-based app for data management and analytics.</p>
+            </div>
+            <div class="card">
+            <img src="https://placehold.co/300x200" class="rounded-lg mb-4">
+            <h3 class="text-xl font-semibold">C++ CLI Program</h3>
+            <p class="text-gray-400">Console-based app for data management and analytics.</p>
+            </div>
+            <div class="card">
+            <img src="https://placehold.co/300x200" class="rounded-lg mb-4">
+            <h3 class="text-xl font-semibold">C++ CLI Program</h3>
+            <p class="text-gray-400">Console-based app for data management and analytics.</p>
+            </div>
+            <div class="card">
+            <img src="https://placehold.co/300x200" class="rounded-lg mb-4">
+            <h3 class="text-xl font-semibold">C++ CLI Program</h3>
+            <p class="text-gray-400">Console-based app for data management and analytics.</p>
+            </div>
+            
+        </div>
+        </div>
+    </section>
+-->
+
+
+
+    // 🌬 Smooth Scroll Effect
+    document.querySelectorAll('a[href^="#"]').forEach(anchor => {
+    anchor.addEventListener("click", function (e) {
+        e.preventDefault();
+        document.querySelector(this.getAttribute("href")).scrollIntoView({
+        behavior: "smooth"
+        });
+    });
+    });

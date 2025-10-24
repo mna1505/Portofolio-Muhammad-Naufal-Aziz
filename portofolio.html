@@ -1,0 +1,495 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Portofolio Muhammad Naufal Aziz</title>
+    <link href="https://cdn.jsdelivr.net/npm/tailwindcss@2.2.19/dist/tailwind.min.css" rel="stylesheet">
+    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="https://unpkg.com/aos@next/dist/aos.css" />
+</head>
+<body>
+    
+    <!-- ===== HEADER ===== -->
+    <header class="custom-header">
+        <div class="header-container">
+        <!-- Logo -->
+        <h1 class="text-1xl font-bold text-blue-400 leading-tight">
+            GRAPHIT <br> MNAZ
+        </h1>
+
+        <!-- Navigation -->
+        <nav>
+            <ul class="flex gap-6 text-sm font-medium">
+            <li><a href="#home" class="hover:text-blue-300">Home</a></li>
+            <li><a href="#about" class="hover:text-blue-300">About</a></li>
+            <li><a href="#experience" class="hover:text-blue-300">Experience</a></li>
+            <li><a href="#projects" class="hover:text-blue-300">Project</a></li>
+            <li><a href="#skills" class="hover:text-blue-300">Skills</a></li>
+            <li><a href="#contact" class="hover:text-blue-300">Contact</a></li>
+            </ul>
+        </nav>
+
+        <!-- Theme Toggle Button -->
+        <button id="toggleTheme" class="bg-blue-400 p-1 rounded hover:bg-blue-500">
+            <img id="themeIcon" src="dark mode.svg" alt="Dark Mode" class="w-6 h-6">
+        </button>
+        </div>
+    </header>
+
+    <!-- ===== HOME SECTION ===== -->
+    <section data-aos="zoom-out-down" id="home" class="flex flex-col md:flex-row items-center justify-center text-center py-40 relative">
+        <img src="gambar/anime fix 1.png" alt="Anime Left" class="w-40 object-contain md:absolute left-10">
+        
+        <div class="max-w-2xl px-4">
+        <h2 class="text-4xl font-bold text-blue-400 mb-4">Welcome to My Portfolio</h2>
+        <p>&#127775; Combining logic and imagination into a miracle &#127775;</p>
+        </div>
+
+        <img src="gambar/anime fix 2.png" alt="Anime Right" class="w-40 object-contain md:absolute right-10">
+    </section>
+
+    <!-- ===== ABOUT SECTION ===== -->
+    <section id="about" class="py-10">
+        <div class="container mx-auto px-6 md:flex items-center gap-10">
+        
+        <!-- Gambar Profil -->
+        <img 
+            data-aos="fade-down" 
+            id="aboutImage" 
+            src="gambar/anime new 1.png" 
+            class="rounded-full shadow-lg mx-auto md:mx-0 w-48 h-48 object-cover" 
+            alt="About Me Image"
+        >
+
+        <!-- Deskripsi -->
+        <div data-aos="fade-right" class="mt-6 md:mt-0">
+            <h2 class="text-3xl font-bold mb-4 text-blue-400">
+            <span id="typing-text"></span><span class="typing-cursor">|</span>
+            </h2>
+
+            <p class="text-gray-300 mb-6 text-justify">
+            I’m Muhammad Naufal Aziz, an Informatics Engineering student who loves turning ideas into digital art and interactive experiences.
+            With a deep curiosity for how technology and design can work together, I focus on creating visuals and interfaces that don’t just look good — but also feel right to use.
+            </p>
+
+            <p class="text-gray-300 mb-6 text-justify">
+            My interests revolve around UI/UX design, web development, and digital illustration.
+            I enjoy exploring how color, motion, and structure can shape the way people connect with technology.
+            </p>
+
+            <p class="text-gray-300 mb-6 text-justify">
+            I’m always learning — discovering new tools, experimenting with fresh ideas, and building projects that push my creativity further.
+            My goal is simple: to grow as a designer and developer who blends logic and imagination into meaningful digital experiences.
+            </p>
+
+            <!-- Social Links -->
+            <div class="flex gap-6">
+            <a href="https://www.instagram.com/graphit_mnaz/" target="_blank">
+                <img src="gambar/IG.png" alt="Instagram" class="w-7 h-7">
+            </a>
+            <a href="https://web.facebook.com/profile.php?id=100092466116969" target="_blank">
+                <img src="gambar/FB.png" alt="Facebook" class="w-7 h-7">
+            </a>
+            <a href="https://www.linkedin.com/in/muhammad-naufal-aziz-a57757309/" target="_blank">
+                <img src="gambar/IN.png" alt="LinkedIn" class="w-7 h-7">
+            </a>
+            <a href="https://github.com/mna1505" target="_blank">
+                <img src="gambar/GH.png" alt="GitHub" class="w-7 h-7">
+            </a>
+            </div>
+        </div>
+        </div>
+    </section>
+
+    <!-- ===== EXPERIENCE SECTION ===== -->
+    <section id="experience" class="py-20 text-gray-300">
+    <div class="container mx-auto px-6 space-y-20">
+
+        <h2 class="text-center text-4xl font-bold text-blue-400 mb-4">My Experience</h2>
+
+        <!-- Experience 1 -->
+        <div class="flex flex-col md:flex-row items-center gap-10">
+        <div data-aos="fade-right" class="md:w-1/2">
+            <h3 class="text-2xl font-bold text-blue-400 mb-3">Graphic Designer</h3>
+            <p class="mb-2 text-sm italic">Sidoarjo General Election Commission | 2023</p>
+            <p class = "text-justify">
+            Designed a wide range of visual campaign materials and infographics to support public awareness initiatives.
+            Focused on creating clear, engaging, and trustworthy designs that strengthened the institution’s communication impact.
+            </p>
+        </div>
+
+        <div data-aos="fade-left" class="md:w-1/2 flex justify-center">
+            <img src="gambar/kerja 1.jpeg" alt="Graphic Designer"
+            class="rounded-2xl shadow-lg w-80 h-56 object-cover" />
+        </div>
+        </div>
+
+        <!-- Experience 2 -->
+        <div class="flex flex-col md:flex-row-reverse items-center gap-10">
+        <div data-aos="fade-left" class="md:w-1/2">
+            <h3 class="text-2xl font-bold text-blue-400 mb-3">Graphic Design Teacher</h3>
+            <p class="mb-2 text-sm italic">As Sakinah Islamic Junior High School | 2025 - Present</p>
+            <p class = "text-justify">
+            Teaching students the fundamentals of visual communication, color harmony, and layout composition using CorelDRAW and Canva.
+            Encouraging creativity and critical thinking through real-world design projects and hands-on learning.
+            </p>
+        </div>
+
+        <div data-aos="fade-right" class="md:w-1/2 flex justify-center">
+            <img src="gambar/kerja 2.jpeg" alt="Graphic Design Teacher"
+            class="rounded-2xl shadow-lg w-80 h-56 object-cover" />
+        </div>
+        </div>
+
+        <!-- Experience 3 -->
+        <div class="flex flex-col md:flex-row items-center gap-10">
+        <div data-aos="fade-right" class="md:w-1/2">
+            <h3 class="text-2xl font-bold text-blue-400 mb-3">Internet of Things Student</h3>
+            <p class="mb-2 text-sm italic">BPVP Sidoarjo | 2025</p>
+            <p class = "text-justify">
+            Learning how to integrate hardware and software in IoT systems. Developing automation, sensor-based data monitoring,
+            and real-time control applications for smart technology environments.
+            </p>
+        </div>
+
+        <div data-aos="fade-left" class="md:w-1/2 flex justify-center">
+            <img src="gambar/kerja 3.jpg" alt="Internet of Things Student"
+            class="rounded-2xl shadow-lg w-80 h-56 object-cover" />
+        </div>
+        </div>
+
+        <!-- Experience 4 -->
+        <div class="flex flex-col md:flex-row-reverse items-center gap-10">
+        <div data-aos="fade-left" class="md:w-1/2">
+            <h3 class="text-2xl font-bold text-blue-400 mb-3">Figma for UI/UX Design Student</h3>
+            <p class="mb-2 text-sm italic">My Skill ID Learning | 2025</p>
+            <p class = "text-justify">
+            Explored the fundamentals of UI/UX design using Figma, focusing on wireframing, prototyping, and creating user-centered interfaces.
+            Learned to balance aesthetics with usability to deliver intuitive digital experiences.
+            </p>
+        </div>
+
+        <div data-aos="fade-right" class="md:w-1/2 flex justify-center">
+            <img src="gambar/kerja 4.png" alt="Figma for UI/UX Design Student"
+            class="rounded-2xl shadow-lg w-80 h-56 object-cover" />
+        </div>
+        </div>
+
+        <!-- Experience 5 -->
+        <div class="flex flex-col md:flex-row items-center gap-10">
+        <div data-aos="fade-right" class="md:w-1/2">
+            <h3 class="text-2xl font-bold text-blue-400 mb-3">Graphic Design Fundamental Student</h3>
+            <p class="mb-2 text-sm italic">My Skill ID Learning | 2025</p>
+            <p class = "text-justify">
+            Studied the core principles of graphic design including typography, color theory, and layout composition.
+            Applied these concepts through hands-on projects to build strong design intuition and visual storytelling skills.
+            </p>
+        </div>
+
+        <div data-aos="fade-left" class="md:w-1/2 flex justify-center">
+            <img src="gambar/Kerja 5.png" alt="Graphic Design Fundamental Student"
+            class="rounded-2xl shadow-lg w-80 h-56 object-cover" />
+        </div>
+        </div>
+
+        <!-- Experience 6 -->
+        <div class="flex flex-col md:flex-row-reverse items-center gap-10">
+        <div data-aos="fade-left" class="md:w-1/2">
+            <h3 class="text-2xl font-bold text-blue-400 mb-3">Canva for Design Student</h3>
+            <p class="mb-2 text-sm italic">My Skill ID Learning | 2025</p>
+            <p class = "text-justify">
+            Practiced creative design composition using Canva by developing marketing materials, posters, and social media content.
+            Focused on visual hierarchy and effective use of typography for impactful digital communication.
+            </p>
+        </div>
+
+        <div data-aos="fade-right" class="md:w-1/2 flex justify-center">
+            <img src="gambar/Kerja 6.png" alt="Canva for Design Student"
+            class="rounded-2xl shadow-lg w-80 h-56 object-cover" />
+        </div>
+        </div>
+
+        <!-- Experience 7 -->
+        <div class="flex flex-col md:flex-row items-center gap-10">
+        <div data-aos="fade-right" class="md:w-1/2">
+            <h3 class="text-2xl font-bold text-blue-400 mb-3">Web 3.0 Blockchain Technology Student</h3>
+            <p class="mb-2 text-sm italic">My Skill ID Learning | 2025</p>
+            <p class = "text-justify">
+            Gaining foundational knowledge in decentralized systems, blockchain structure, and Web 3.0 principles.
+            Exploring how distributed technologies can transform data ownership, digital identity, and online interaction.
+            </p>
+        </div>
+
+        <div data-aos="fade-left" class="md:w-1/2 flex justify-center">
+            <img src="gambar/Kerja 7.png" alt="Web 3.0 Blockchain Technology Student"
+            class="rounded-2xl shadow-lg w-80 h-56 object-cover" />
+        </div>
+        </div>
+
+    </div>
+    </section>
+
+    <!-- ===== PROJECTS ===== -->
+    <section id="projects" class="py-10">
+        <h2 class="text-3xl font-bold text-center text-blue-400 mb-8">My Projects</h2>
+
+        <div class="container mx-auto grid md:grid-cols-3 gap-8 px-6">
+
+        <!-- Project 1 -->
+        <a href="https://www.instagram.com/p/DOXxbQSCXgq/?img_index=1" target="_blank"
+            class="card block rounded-xl overflow-hidden shadow-lg bg-darkblue/20 hover:scale-105 transition-transform duration-300">
+            <img src="gambar/IG 1.png" alt="projek 1" class="w-full h-100 object-cover" />
+            <div class="p-4 text-center">
+            <h3 class="text-xl font-bold text-blue-400">Desain UI/UX</h3>
+            <p class="text-sm text-gray-300">Aplikasi ABISMA</p>
+            </div>
+        </a>
+
+        <!-- Project 2 -->
+        <a href="https://www.instagram.com/p/DKvvSCfhUkB/?img_index=1" target="_blank"
+            class="card block rounded-xl overflow-hidden shadow-lg bg-darkblue/20 hover:scale-105 transition-transform duration-300">
+            <img src="gambar/IG 2.png" alt="projek 2" class="w-full h-100 object-cover" />
+            <div class="p-4 text-center">
+            <h3 class="text-xl font-bold text-blue-400">Desain UI/UX</h3>
+            <p class="text-sm text-gray-300">Aplikasi Family Organizer</p>
+            </div>
+        </a>
+
+        <!-- Project 3 -->
+        <a href="https://www.instagram.com/p/DKvvSCfhUkB/?img_index=1" target="_blank"
+            class="card block rounded-xl overflow-hidden shadow-lg bg-darkblue/20 hover:scale-105 transition-transform duration-300">
+            <img src="gambar/IG 3.png" alt="projek 3" class="w-full h-100 object-cover" />
+            <div class="p-4 text-center">
+            <h3 class="text-xl font-bold text-blue-400">Desain UI/UX</h3>
+            <p class="text-sm text-gray-300">Aplikasi HANAMI</p>
+            </div>
+        </a>
+
+        <!-- Project 4 -->
+        <a href="https://www.instagram.com/p/DNSULGHpG-h/?img_index=1" target="_blank"
+            class="card block rounded-xl overflow-hidden shadow-lg bg-darkblue/20 hover:scale-105 transition-transform duration-300">
+            <img src="gambar/IG 4.png" alt="projek 4" class="w-full h-100 object-cover" />
+            <div class="p-4 text-center">
+            <h3 class="text-xl font-bold text-blue-400">Fan Art Karakter</h3>
+            <p class="text-sm text-gray-300">Kara dan Citra [PKKMB Fakultas Teknik]</p>
+            </div>
+        </a>
+
+        <!-- Project 5 -->
+        <a href="https://www.instagram.com/p/DMe6cAOTBHG/?img_index=1" target="_blank"
+            class="card block rounded-xl overflow-hidden shadow-lg bg-darkblue/100 hover:scale-105 transition-transform duration-300">
+            <img src="gambar/IG 5.png" alt="projek 5" class="w-full h-100 object-cover" />
+            <div class="p-4 text-center">
+            <h3 class="text-xl font-bold text-blue-400">Fan Art Karakter</h3>
+            <p class="text-sm text-gray-300">Meza [Wibunesa]</p>
+            </div>
+        </a>
+
+        <!-- Project 6 -->
+        <a href="https://www.instagram.com/p/DFQHH64y-Ex/?img_index=2" target="_blank"
+            class="card block rounded-xl overflow-hidden shadow-lg bg-darkblue/100 hover:scale-105 transition-transform duration-300">
+            <img src="gambar/IG 6.jpg" alt="projek 6" class="w-full h-100 object-cover" />
+            <div class="p-4 text-center">
+            <h3 class="text-xl font-bold text-blue-400">Fan Art Karakter</h3>
+            <p class="text-sm text-gray-300">Nesa [Unesartir]</p>
+            </div>
+        </a>
+
+        <!-- Project 7 -->
+        <div class="card block rounded-xl overflow-hidden shadow-lg bg-darkblue/20 hover:scale-105 transition-transform duration-300">
+            <img src="gambar/NH 1.jpg" alt="projek 7" class="w-full h-100 object-cover" />
+            <div class="p-4 text-center">
+            <h3 class="text-xl font-bold text-blue-400">Desain 3D Bangunan</h3>
+            <p class="text-sm text-gray-300">SMK Nurul Huda tampak kiri</p>
+            </div>
+        </div>
+
+        <!-- Project 8 -->
+        <div class="card block rounded-xl overflow-hidden shadow-lg bg-darkblue/20 hover:scale-105 transition-transform duration-300">
+            <img src="gambar/NH 2.png" alt="projek 8" class="w-full h-100 object-cover" />
+            <div class="p-4 text-center">
+            <h3 class="text-xl font-bold text-blue-400">Desain 3D Bangunan</h3>
+            <p class="text-sm text-gray-300">SMK Nurul Huda tampak tengah</p>
+            </div>
+        </div>
+
+        <!-- Project 9 -->
+        <div class="card block rounded-xl overflow-hidden shadow-lg bg-darkblue/20 hover:scale-105 transition-transform duration-300">
+            <img src="gambar/NH 3.jpg" alt="projek 9" class="w-full h-100 object-cover" />
+            <div class="p-4 text-center">
+            <h3 class="text-xl font-bold text-blue-400">Desain 3D Bangunan</h3>
+            <p class="text-sm text-gray-300">SMK Nurul Huda tampak kanan</p>
+            </div>
+        </div>
+
+        <!-- Project 10 -->
+        <div class="card block rounded-xl overflow-hidden shadow-lg bg-darkblue/20 hover:scale-105 transition-transform duration-300">
+            <img src="gambar/PS 1.jpg" alt="projek 9" class="w-full h-100 object-cover" />
+            <div class="p-4 text-center">
+            <h3 class="text-xl font-bold text-blue-400">Desain Poster</h3>
+            <p class="text-sm text-gray-300">Poster Kemerdakaan</p>
+            </div>
+        </div>
+
+        <!-- Project 11 -->
+        <div class="card block rounded-xl overflow-hidden shadow-lg bg-darkblue/20 hover:scale-105 transition-transform duration-300">
+            <img src="gambar/PS 2.png" alt="projek 9" class="w-full h-100 object-cover" />
+            <div class="p-4 text-center">
+            <h3 class="text-xl font-bold text-blue-400">Desain Poster</h3>
+            <p class="text-sm text-gray-300">Poster Penghijauan</p>
+            </div>
+        </div>
+
+        <!-- Project 12 -->
+        <div class="card block rounded-xl overflow-hidden shadow-lg bg-darkblue/20 hover:scale-105 transition-transform duration-300">
+            <img src="gambar/PS 3.jpg" alt="projek 9" class="w-full h-100 object-cover" />
+            <div class="p-4 text-center">
+            <h3 class="text-xl font-bold text-blue-400">Desain Poster</h3>
+            <p class="text-sm text-gray-300">Poster Donasi</p>
+            </div>
+        </div>
+
+        </div>
+    </section>
+
+    <!-- ===== SKILLS ===== -->
+    <section id="skills" class="mt-20 px-10 md:px-20 pb-20">
+        <h2 class="text-3xl font-bold text-center text-blue-400 mb-8">My Skills</h2>
+
+        <div class="grid md:grid-cols-3 gap-6">
+        <!-- Skill Item -->
+        <div data-aos="zoom-in" class="bg-darkblue/70 border border-gray-700 p-6 rounded-2xl flex items-center gap-4">
+            <img src="gambar/apk 1.png" class="w-12" />
+            <div>
+            <h3 class="text-lg font-semibold">CorelDRAW</h3>
+            <p class="text-gray-400 text-sm">A professional vector graphic design software for creating logos, illustrations, and layouts with precision.</p>
+            </div>
+        </div>
+
+        <div data-aos="zoom-in" class="bg-darkblue/70 border border-gray-700 p-6 rounded-2xl flex items-center gap-4">
+            <img src="gambar/apk 2.png" class="w-12" />
+            <div>
+            <h3 class="text-lg font-semibold">Figma</h3>
+            <p class="text-gray-400 text-sm">A collaborative UI/UX design platform for building responsive interfaces and prototypes efficiently.</p>
+            </div>
+        </div>
+
+        <div data-aos="zoom-in" class="bg-darkblue/70 border border-gray-700 p-6 rounded-2xl flex items-center gap-4">
+            <img src="gambar/apk 3.png" class="w-12" />
+            <div>
+            <h3 class="text-lg font-semibold">Visual Studio Code</h3>
+            <p class="text-gray-400 text-sm">A lightweight yet powerful code editor that supports multiple programming languages and extensions.</p>
+            </div>
+        </div>
+
+        <div data-aos="zoom-in" class="bg-darkblue/70 border border-gray-700 p-6 rounded-2xl flex items-center gap-4">
+            <img src="gambar/apk 4.png" class="w-12" />
+            <div>
+            <h3 class="text-lg font-semibold">Canva</h3>
+            <p class="text-gray-400 text-sm">An easy-to-use graphic design tool for producing posters, social media visuals, and presentations quickly.</p>
+            </div>
+        </div>
+
+        <div data-aos="zoom-in" class="bg-darkblue/70 border border-gray-700 p-6 rounded-2xl flex items-center gap-4">
+            <img src="gambar/apk 5.png" class="w-12" />
+            <div>
+            <h3 class="text-lg font-semibold">Coohom</h3>
+            <p class="text-gray-400 text-sm">An interior design and 3D visualization platform for creating realistic architectural renderings.</p>
+            </div>
+        </div>
+
+        <div data-aos="zoom-in" class="bg-darkblue/70 border border-gray-700 p-6 rounded-2xl flex items-center gap-4">
+            <img src="gambar/apk 6.png" class="w-12" />
+            <div>
+            <h3 class="text-lg font-semibold">CapCut</h3>
+            <p class="text-gray-400 text-sm">A versatile video editing application for producing engaging and high-quality multimedia content.</p>
+            </div>
+        </div>
+        </div>
+    </section>
+
+    <!-- ===== CONTACT SECTION ===== -->
+    <section id="contact" class="py-20 text-blue-400">
+        <div class="container mx-auto px-6 flex flex-col md:flex-row items-center justify-center gap-10">
+        
+        <!-- Bagian Kiri: Gambar Anime -->
+        <div data-aos="fade-right" class="md:w-1/2 flex justify-center">
+            <img
+            src="gambar/anime fix 3.png"
+            alt="Anime Contact"
+            class="w-72 md:w-96 object-contain drop-shadow-lg animate-shark"
+            />
+        </div>
+
+        <!-- Bagian Kanan: Formulir Kontak -->
+        <div data-aos="fade-left" class="md:w-1/2 text-center">
+            <h2 class="text-3xl font-bold mb-8">Contact Me</h2>
+            <form class="max-w-lg mx-auto space-y-4">
+            <input
+                type="text"
+                placeholder="Your Name"
+                class="w-full p-3 rounded border border-gray-700 bg-transparent"
+            />
+            <input
+                type="email"
+                placeholder="Your Email"
+                class="w-full p-3 rounded border border-gray-700 bg-transparent"
+            />
+            <textarea
+                placeholder="Your Message"
+                rows="5"
+                class="w-full p-3 rounded border border-gray-700 bg-transparent"
+            ></textarea>
+            <button
+                type="submit"
+                class="bg-blue-400 text-white px-6 py-2 rounded hover:bg-blue-700 transition duration-300"
+            >
+                Send Message
+            </button>
+            </form>
+        </div>
+        </div>
+    </section>
+
+    <br><br><br>
+
+    <!-- ===== FOOTER ===== -->
+    <footer class="custom-footer text-gray-300">
+    <div class="container mx-auto px-6 py-10 flex flex-col md:flex-row items-center justify-between gap-6">
+
+        <!-- Left Side -->
+        <div class="text-center md:text-left">
+        <h3 class="text-xl font-bold text-blue-400">Muhammad Naufal Aziz</h3>
+        <p class="text-sm text-gray-400">Web Developer | Graphic Designer | Tech Enthusiast</p>
+        </div>
+
+        <!-- Middle (Social Links) -->
+        <div class="flex space-x-5">
+        <a href="https://github.com/mna1505" target="_blank" class="hover:text-blue-400 transition">
+            <i class="fab fa-github text-2xl"></i>
+        </a>
+        <a href="https://www.linkedin.com/in/muhammad-naufal-aziz" target="_blank" class="hover:text-blue-400 transition">
+            <i class="fab fa-linkedin text-2xl"></i>
+        </a>
+        <a href="mailto:mna1505@gmail.com" class="hover:text-blue-400 transition">
+            <i class="fas fa-envelope text-2xl"></i>
+        </a>
+        </div>
+
+        <!-- Right Side -->
+        <p class="text-sm text-gray-400 text-center md:text-right">
+        &copy; 2025 Muhammad Naufal Aziz. All Rights Reserved.
+        </p>
+
+    </div>
+    </footer>
+
+    <!-- ===== SCRIPT ===== -->
+    <script src="https://unpkg.com/aos@next/dist/aos.js"></script>
+    <script>
+        AOS.init();
+    </script>
+    <script src="script.js"></script>
+</body>
+</html>

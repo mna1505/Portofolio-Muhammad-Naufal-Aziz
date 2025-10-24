@@ -1,0 +1,180 @@
+/* =====================================================
+    🔹 GLOBAL STYLE
+  ===================================================== */
+body {
+  transition: background-color 0.5s ease, color 0.3s ease;
+}
+
+/* Scroll offset biar gak ketimpa header saat navigasi */
+section {
+  scroll-margin-top: 100px;
+}
+
+/* =====================================================
+    🔹 HEADER
+  ===================================================== */
+.custom-header {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  z-index: 999;
+  background: rgba(89, 159, 235, 0.17);
+  backdrop-filter: blur(12px);
+  -webkit-backdrop-filter: blur(30px);
+  box-shadow: 0 2px 10px rgba(0, 0, 0, 0.3);
+}
+
+.header-container {
+  max-width: 1200px;
+  margin: 0 auto;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 1.25rem 1.5rem;
+}
+
+/* =====================================================
+    🔹 THEME TOGGLE
+  ===================================================== */
+#toggleTheme img {
+  width: 32px;
+  height: 32px;
+  cursor: pointer;
+  transition: transform 0.3s ease, opacity 0.3s ease;
+}
+
+#toggleTheme img:hover {
+  transform: rotate(20deg);
+  opacity: 0.8;
+}
+
+/* =====================================================
+    🔹 LIGHT / DARK MODE
+  ===================================================== */
+.light-mode {
+  background-color: #fff;
+  color: #000;
+}
+
+.dark-mode {
+  background-color: #111827;
+  color: #fff;
+}
+
+/* Warna teks spesifik */
+h3 {
+  color: #42a5f5;
+}
+
+.light-mode p {
+  color: #000;
+}
+
+.dark-mode p {
+  color: #fff;
+}
+
+/* =====================================================
+    🔹 CARD HOVER EFFECT
+  ===================================================== */
+.card {
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.card:hover {
+  transform: translateY(-10px) scale(1.05);
+  box-shadow: 0 15px 25px rgba(0, 0, 0, 0.4);
+}
+
+/* =====================================================
+    🔹 TYPING CURSOR (Blink)
+  ===================================================== */
+.typing-cursor {
+  display: inline-block;
+  margin-left: 5px;
+  color: #60a5fa;
+  animation: blink 0.7s steps(2, start) infinite;
+}
+
+@keyframes blink {
+  to {
+    visibility: hidden;
+  }
+}
+
+/* =====================================================
+    🔹 ANIMASI SHARK (Goyang Kanan–Kiri)
+  ===================================================== */
+@keyframes sharkSwing {
+  0% {
+    transform: translateX(0);
+  }
+  25% {
+    transform: translateX(10px) rotate(5deg);
+  }
+  50% {
+    transform: translateX(0);
+  }
+  75% {
+    transform: translateX(-10px) rotate(-5deg);
+  }
+  100% {
+    transform: translateX(0);
+  }
+}
+
+.animate-shark {
+  animation: sharkSwing 1s ease-in-out infinite;
+  transform-origin: center;
+}
+
+/* (Opsional) pause saat hover */
+.animate-shark:hover {
+  animation-play-state: paused;
+}
+
+/* =====================================================
+    🔹 FOOTER
+  ===================================================== */
+.custom-footer {
+  background: rgba(89, 159, 235, 0.17);
+  text-align: center;
+  padding: 20px;
+}
+
+/* ===== Custom Footer ===== */
+.custom-footer {
+  box-shadow: 0 -2px 10px rgba(0, 0, 0, 0.3);
+  position: relative;
+  overflow: hidden;
+}
+
+/* Efek garis cahaya halus di atas footer */
+.custom-footer::before {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: -50%;
+  width: 200%;
+  height: 2px;
+  animation: shimmer 4s linear infinite;
+}
+
+@keyframes shimmer {
+  0% {
+    transform: translateX(-50%);
+  }
+  100% {
+    transform: translateX(50%);
+  }
+}
+
+/* Hover effect for icons */
+.custom-footer i {
+  transition: transform 0.3s ease;
+}
+
+.custom-footer a:hover i {
+  transform: scale(1.2);
+}
