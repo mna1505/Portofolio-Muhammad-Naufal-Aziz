@@ -178,3 +178,38 @@ h3 {
 .custom-footer a:hover i {
   transform: scale(1.2);
 }
+
+/* =====================================================
+   🔹 RESPONSIVE FIX (untuk HP)
+===================================================== */
+@media (max-width: 768px) {
+  h1,
+  h2,
+  h3 {
+    text-align: center;
+  }
+
+  .header-container {
+    flex-direction: column;
+    text-align: center;
+    gap: 0.5rem;
+  }
+
+  .custom-footer {
+    text-align: center;
+    padding: 30px 10px;
+  }
+
+  .custom-footer p {
+    font-size: 0.9rem;
+  }
+
+  img {
+    max-width: 100%;
+    height: auto;
+  }
+
+  body {
+    overflow-x: hidden;
+  }
+}
