@@ -1,68 +1,34 @@
+```css
 /* =====================================================
-    🔹 GLOBAL STYLE
-  ===================================================== */
+   🔹 GLOBAL BASE
+===================================================== */
 body {
   transition: background-color 0.5s ease, color 0.3s ease;
+  overflow-x: hidden;
 }
 
-/* Scroll offset biar gak ketimpa header saat navigasi */
 section {
-  scroll-margin-top: 100px;
+  scroll-margin-top: 100px; /* offset header */
+}
+
+img {
+  max-width: 100%;
+  height: auto;
 }
 
 /* =====================================================
-    🔹 HEADER
-  ===================================================== */
-.custom-header {
-  position: fixed;
-  top: 0;
-  left: 0;
-  width: 100%;
-  z-index: 999;
-  background: rgba(89, 159, 235, 0.17);
-  backdrop-filter: blur(12px);
-  -webkit-backdrop-filter: blur(30px);
-  box-shadow: 0 2px 10px rgba(0, 0, 0, 0.3);
-}
-
-.header-container {
-  max-width: 1200px;
-  margin: 0 auto;
-  display: flex;
-  justify-content: space-between;
-  align-items: center;
-  padding: 1.25rem 1.5rem;
-}
-
-/* =====================================================
-    🔹 THEME TOGGLE
-  ===================================================== */
-#toggleTheme img {
-  width: 32px;
-  height: 32px;
-  cursor: pointer;
-  transition: transform 0.3s ease, opacity 0.3s ease;
-}
-
-#toggleTheme img:hover {
-  transform: rotate(20deg);
-  opacity: 0.8;
-}
-
-/* =====================================================
-    🔹 LIGHT / DARK MODE
-  ===================================================== */
+   🔹 THEME MODE
+===================================================== */
 .light-mode {
-  background-color: #fff;
-  color: #000;
+  background-color: #ffffff;
+  color: #000000;
 }
 
 .dark-mode {
   background-color: #111827;
-  color: #fff;
+  color: #ffffff;
 }
 
-/* Warna teks spesifik */
 h3 {
   color: #42a5f5;
 }
@@ -76,8 +42,45 @@ h3 {
 }
 
 /* =====================================================
-    🔹 CARD HOVER EFFECT
-  ===================================================== */
+   🔹 HEADER
+===================================================== */
+.custom-header {
+  position: fixed;
+  inset: 0 0 auto 0;
+  z-index: 999;
+  background: rgba(89, 159, 235, 0.17);
+  backdrop-filter: blur(12px);
+  -webkit-backdrop-filter: blur(30px);
+  box-shadow: 0 2px 10px rgba(0, 0, 0, 0.3);
+}
+
+.header-container {
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 1.25rem 1.5rem;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+/* =====================================================
+   🔹 THEME TOGGLE
+===================================================== */
+#toggleTheme img {
+  width: 32px;
+  height: 32px;
+  cursor: pointer;
+  transition: transform 0.3s ease, opacity 0.3s ease;
+}
+
+#toggleTheme img:hover {
+  transform: rotate(20deg);
+  opacity: 0.8;
+}
+
+/* =====================================================
+   🔹 CARD EFFECT
+===================================================== */
 .card {
   transition: transform 0.3s ease, box-shadow 0.3s ease;
 }
@@ -88,8 +91,8 @@ h3 {
 }
 
 /* =====================================================
-    🔹 TYPING CURSOR (Blink)
-  ===================================================== */
+   🔹 TYPING CURSOR
+===================================================== */
 .typing-cursor {
   display: inline-block;
   margin-left: 5px;
@@ -104,24 +107,14 @@ h3 {
 }
 
 /* =====================================================
-    🔹 ANIMASI SHARK (Goyang Kanan–Kiri)
-  ===================================================== */
+   🔹 SHARK ANIMATION
+===================================================== */
 @keyframes sharkSwing {
-  0% {
-    transform: translateX(0);
-  }
-  25% {
-    transform: translateX(10px) rotate(5deg);
-  }
-  50% {
-    transform: translateX(0);
-  }
-  75% {
-    transform: translateX(-10px) rotate(-5deg);
-  }
-  100% {
-    transform: translateX(0);
-  }
+  0% { transform: translateX(0); }
+  25% { transform: translateX(10px) rotate(5deg); }
+  50% { transform: translateX(0); }
+  75% { transform: translateX(-10px) rotate(-5deg); }
+  100% { transform: translateX(0); }
 }
 
 .animate-shark {
@@ -129,28 +122,142 @@ h3 {
   transform-origin: center;
 }
 
-/* (Opsional) pause saat hover */
 .animate-shark:hover {
   animation-play-state: paused;
 }
 
 /* =====================================================
-    🔹 FOOTER
-  ===================================================== */
-.custom-footer {
-  background: rgba(89, 159, 235, 0.17);
-  text-align: center;
-  padding: 20px;
+   🔹 MUSIC PLAYER
+===================================================== */
+.music-section {
+  display: flex;
+  justify-content: center;
+  margin: 40px 0;
 }
 
-/* ===== Custom Footer ===== */
+.music-card {
+  width: 520px;
+  max-width: 90%;
+  padding: 14px 18px;
+  display: flex;
+  align-items: center;
+  gap: 16px;
+  border-radius: 16px;
+  background: rgba(89, 159, 235, 0.18);
+  backdrop-filter: blur(12px);
+}
+
+.music-cover {
+  width: 52px;
+  height: 52px;
+  border-radius: 10px;
+  object-fit: cover;
+  flex-shrink: 0;
+}
+
+.music-info {
+  min-width: 140px;
+  display: flex;
+  flex-direction: column;
+  font-size: 14px;
+}
+
+.music-info strong {
+  font-weight: 600;
+  line-height: 1.2;
+}
+
+.music-info span {
+  font-size: 12px;
+  opacity: 0.7;
+}
+
+.wave {
+  width: 90px;
+  height: 28px;
+  display: flex;
+  align-items: flex-end;
+  gap: 4px;
+  flex-shrink: 0;
+}
+
+.wave span {
+  width: 10px;
+  height: 30px;
+  background: #60a5fa;
+  border-radius: 2px;
+  animation: wave 1s ease-in-out infinite;
+}
+
+.wave.paused span {
+  animation-play-state: paused;
+  opacity: 0.4;
+}
+
+@keyframes wave {
+  0%, 100% { height: 6px; }
+  50% { height: 26px; }
+}
+
+.controls {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  flex-shrink: 0;
+}
+
+.icon-btn {
+  background: none;
+  border: none;
+  padding: 6px;
+  cursor: pointer;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.icon-btn svg {
+  width: 20px;
+  height: 20px;
+  stroke: currentColor;
+  stroke-width: 2;
+  fill: none;
+}
+
+.play-btn svg {
+  fill: currentColor;
+  stroke: none;
+}
+
+.back-btn {
+  background: none;
+  border: none;
+  padding: 0;
+  cursor: pointer;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  color: inherit;
+  transition: transform 0.2s ease, opacity 0.2s ease;
+}
+
+.back-btn:hover {
+  opacity: 0.7;
+  transform: translateX(-2px);
+}
+
+/* =====================================================
+   🔹 FOOTER
+===================================================== */
 .custom-footer {
-  box-shadow: 0 -2px 10px rgba(0, 0, 0, 0.3);
   position: relative;
+  padding: 20px;
+  text-align: center;
+  background: rgba(89, 159, 235, 0.17);
+  box-shadow: 0 -2px 10px rgba(0, 0, 0, 0.3);
   overflow: hidden;
 }
 
-/* Efek garis cahaya halus di atas footer */
 .custom-footer::before {
   content: "";
   position: absolute;
@@ -162,15 +269,10 @@ h3 {
 }
 
 @keyframes shimmer {
-  0% {
-    transform: translateX(-50%);
-  }
-  100% {
-    transform: translateX(50%);
-  }
+  from { transform: translateX(-50%); }
+  to { transform: translateX(50%); }
 }
 
-/* Hover effect for icons */
 .custom-footer i {
   transition: transform 0.3s ease;
 }
@@ -180,37 +282,25 @@ h3 {
 }
 
 /* =====================================================
-   🔹 RESPONSIVE FIX (untuk HP)
+   🔹 RESPONSIVE
 ===================================================== */
 @media (max-width: 768px) {
-  h1,
-  h2,
-  h3 {
+  h1, h2, h3 {
     text-align: center;
   }
 
   .header-container {
     flex-direction: column;
-    text-align: center;
     gap: 0.5rem;
+    text-align: center;
   }
 
   .custom-footer {
-    text-align: center;
     padding: 30px 10px;
   }
 
   .custom-footer p {
     font-size: 0.9rem;
-  }
-
-  img {
-    max-width: 100%;
-    height: auto;
-  }
-
-  body {
-    overflow-x: hidden;
   }
 }
 
@@ -220,3 +310,4 @@ h3 {
     gap: 1rem;
   }
 }
+```
