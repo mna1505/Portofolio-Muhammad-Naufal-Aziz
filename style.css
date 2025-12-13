@@ -213,3 +213,10 @@ h3 {
     overflow-x: hidden;
   }
 }
+
+@media (max-width: 640px) {
+  .header-center {
+    font-size: 14px;
+    gap: 1rem;
+  }
+}

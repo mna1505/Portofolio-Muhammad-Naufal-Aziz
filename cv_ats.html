@@ -4,11 +4,13 @@
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>CV - Muhammad Naufal Aziz</title>
+  <link rel="stylesheet" href="style.css">
   <style>
     body {
       font-family: Arial, sans-serif;
       margin: 40px auto;
       max-width: 800px;
+      padding-top: 120px;
       line-height: 1.6;
       color: #222;
       background-color: #fff;
@@ -19,6 +21,10 @@
       color: #000000;
       padding-bottom: 6px;
       margin-bottom: 10px;
+    }
+
+    .dark-mode h1 {
+      color: #ffffff;
     }
 
     p, li, td {
@@ -35,6 +41,11 @@
       margin: 6px 0 12px;
     }
 
+    .dark-mode hr {
+      border-top: 1px solid #ffffff;
+    }
+
+    
     table {
       width: 100%;
       border-collapse: collapse;
@@ -54,8 +65,8 @@
       text-decoration: none;
     }
 
-    a:hover {
-      text-decoration: underline;
+    .dark-mode a {
+      color: #ffffff;
     }
 
     .date {
@@ -93,10 +104,58 @@
     align-items: center;
     padding: 1.25rem 1.5rem;
     }
+
+    .header-center a {
+      text-decoration: none;
+      color: inherit;
+      font-size: 14px;
+      font-weight: 500;
+      padding: 6px 12px;
+      border-radius: 8px;
+      transition: color 0.3s ease, background 0.3s ease;
+    }
+
+    .header-center a:hover {
+      color: #60a5fa; /* setara blue-300 */
+    }
+
+    
   </style>
 </head>
 
 <body>
+
+  <header class="custom-header">
+  <div class="header-container">
+
+    <!-- KIRI -->
+    <div class="header-left">
+      <a href="index.html" class="back-btn" aria-label="Kembali">
+        <svg width="22" height="22" viewBox="0 0 24 24" fill="none"
+          xmlns="http://www.w3.org/2000/svg">
+          <path d="M15 18L9 12L15 6"
+            stroke="currentColor"
+            stroke-width="2"
+            stroke-linecap="round"
+            stroke-linejoin="round"/>
+        </svg>
+      </a>
+    </div>
+
+    <!-- TENGAH -->
+    <nav class="header-center">
+      <a href="cv_ats.html" class="nav-link">CV ATS</a>
+      <a href="cv_kreatif.html" class="nav-link">CV Kreatif</a>
+    </nav>
+
+    <!-- KANAN -->
+    <div class="header-right" id="toggleTheme">
+      <img id="themeIcon" src="dark mode.svg" alt="Toggle Theme" class="bg-blue-400 p-1 rounded hover:bg-blue-500">
+    </div>
+
+  </div>
+</header>
+
 
   <h1>Muhammad Naufal Aziz</h1>
 
@@ -269,6 +328,11 @@
     <li>Bahasa Inggris (Dasar)</li>
   </ul>
 
+  <script src="https://unpkg.com/aos@next/dist/aos.js"></script>
+    <script>
+        AOS.init();
+    </script>
+  <script src="script.js"></script>
 
 </body>
 </html>
