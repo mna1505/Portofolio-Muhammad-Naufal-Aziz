@@ -112,6 +112,7 @@ function initSmoothScroll() {
 function initMusicPlayer() {
   const audio = document.getElementById("audio");
   const playBtn = document.getElementById("playBtn");
+  const playIcon = document.getElementById("playIcon");
   const prevBtn = document.getElementById("prevBtn");
   const nextBtn = document.getElementById("nextBtn");
   const wave = document.querySelector(".wave");
@@ -120,8 +121,16 @@ function initMusicPlayer() {
   const title = document.getElementById("title");
   const artist = document.getElementById("artist");
 
-  if (!audio || !playBtn) return;
+  if (!audio || !playBtn || !playIcon) return;
 
+  /* ================= ICON SVG ================= */
+  const ICON_PLAY = `<path d="M8 5v14l11-7z" />`;
+  const ICON_PAUSE = `
+    <path d="M6 5h4v14H6z" />
+    <path d="M14 5h4v14h-4z" />
+  `;
+
+  /* ================= PLAYLIST ================= */
   const songs = [
     {
       title: "Autumn Mood",
@@ -140,6 +149,7 @@ function initMusicPlayer() {
   let currentSong = 0;
   let waveInterval = null;
 
+  /* ================= FUNCTIONS ================= */
   function loadSong(index) {
     audio.src = songs[index].src;
     cover.src = songs[index].cover;
@@ -150,15 +160,15 @@ function initMusicPlayer() {
   function randomizeWave() {
     waveBars.forEach(bar => {
       bar.style.animationDuration = `${(Math.random() * 0.6 + 0.4).toFixed(2)}s`;
-      bar.style.animationDelay = `${(Math.random() * 0.5).toFixed(2)}s`;
-      bar.style.height = `${Math.floor(Math.random() * 18) + 10}px`;
+      bar.style.animationDelay = `${(Math.random() * 0.4).toFixed(2)}s`;
+      bar.style.height = `${Math.floor(Math.random() * 18) + 8}px`;
     });
   }
 
   function startWave() {
-    randomizeWave();
     wave.classList.remove("paused");
-    waveInterval = setInterval(randomizeWave, 800);
+    randomizeWave();
+    waveInterval = setInterval(randomizeWave, 700);
   }
 
   function stopWave() {
@@ -166,16 +176,25 @@ function initMusicPlayer() {
     clearInterval(waveInterval);
   }
 
+  function setPlayState(isPlaying) {
+    playIcon.innerHTML = isPlaying ? ICON_PAUSE : ICON_PLAY;
+  }
+
+  /* ================= INIT ================= */
   loadSong(currentSong);
   stopWave();
+  setPlayState(false);
 
+  /* ================= EVENTS ================= */
   playBtn.addEventListener("click", () => {
     if (audio.paused) {
       audio.play();
       startWave();
+      setPlayState(true);
     } else {
       audio.pause();
       stopWave();
+      setPlayState(false);
     }
   });
 
@@ -184,6 +203,7 @@ function initMusicPlayer() {
     loadSong(currentSong);
     audio.play();
     startWave();
+    setPlayState(true);
   });
 
   prevBtn?.addEventListener("click", () => {
@@ -191,10 +211,24 @@ function initMusicPlayer() {
     loadSong(currentSong);
     audio.play();
     startWave();
+    setPlayState(true);
   });
 
-  audio.addEventListener("ended", () => nextBtn?.click());
+  audio.addEventListener("ended", () => {
+    nextBtn?.click();
+  });
+
+  audio.addEventListener("pause", () => {
+    setPlayState(false);
+    stopWave();
+  });
+
+  audio.addEventListener("play", () => {
+    setPlayState(true);
+    startWave();
+  });
 }
+
 
 /* =====================================================
 🔹 LOAD PAGE (AJAX)
