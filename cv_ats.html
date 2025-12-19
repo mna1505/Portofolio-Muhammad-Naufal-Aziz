@@ -119,11 +119,51 @@
       color: #60a5fa; /* setara blue-300 */
     }
 
+    /* ================= FLOATING DOWNLOAD BUTTON ================= */
+    .download-cv {
+      position: fixed;
+      bottom: 24px;
+      right: 24px;
+      padding: 10px 16px;
+      font-size: 14px;
+      font-weight: 500;
+      border: none;
+      border-radius: 10px;
+      background-color: #2563eb; /* blue-600 */
+      color: #fff;
+      cursor: pointer;
+      box-shadow: 0 8px 20px rgba(0,0,0,0.25);
+      transition: background 0.3s ease, transform 0.2s ease;
+      z-index: 1000;
+    }
+
+    .download-cv:hover {
+      background-color: #1d4ed8; /* blue-700 */
+      transform: translateY(-2px);
+    }
     
+    /* ================= PRINT SETTINGS ================= */
+  @media print {
+    .custom-header,
+    .download-cv {
+      display: none !important;
+    }
+
+    body {
+      padding-top: 0;
+      margin: 20mm;
+    }
+  }
+
   </style>
 </head>
 
 <body>
+
+  <!-- FLOATING DOWNLOAD BUTTON -->
+  <button class="download-cv" onclick="window.print()">
+    Download CV (PDF)
+  </button>
 
   <header class="custom-header">
   <div class="header-container">
@@ -159,48 +199,50 @@
 
   <h1>Muhammad Naufal Aziz</h1>
 
-  <p class="center">
-    <a href="mailto:nopalajez15@gmail.com">nopalajez15@gmail.com</a> |
-    +62 858 5656 8249 | 
-    <a href="https://www.linkedin.com/in/naufal-aziz-a57757309/">linkedin.com/in/naufal-aziz-a57757309</a> | 
-    <a href="https://mna1505.github.io/Portofolio-Muhammad-Naufal-Aziz/">https://mna1505.github.io/Portofolio-Muhammad-Naufal-Aziz/</a> | 
-    Sidoarjo, Jawa Timur, Indonesia
-  </p>
+<p class="center">
+  <a href="mailto:nopalajez15@gmail.com">nopalajez15@gmail.com</a> |
+  +62 858 5656 8249 |
+  <a href="https://www.linkedin.com/in/naufal-aziz-a57757309/">LinkedIn</a> |
+  <a href="https://mna1505.github.io/Portofolio-Muhammad-Naufal-Aziz/">Portofolio</a> |
+  Sidoarjo, Jawa Timur, Indonesia
+</p>
 
-  <p align="justify">
-    Mahasiswa Teknik Informatika semester 3 yang memiliki ketertarikan kuat di bidang desain grafis dan marketing digital. Aktif sebagai anggota Google Developer Group on Campus dan berpengalaman dalam membuat desain promosi media sosial serta visual branding menggunakan Canva, Figma, dan CorelDRAW. Terbiasa menggabungkan kemampuan teknis dan estetika visual untuk mendukung kebutuhan komunikasi digital dan promosi produk.
-  </p>
+<p align="justify">
+  Mahasiswa S1 Teknik Informatika semester 3 dengan latar belakang desain digital dan pengembangan visual berbasis teknologi.
+  Memiliki pengalaman dalam perancangan UI/UX, desain grafis, serta pembuatan konten visual untuk berbagai kebutuhan institusi dan proyek.
+  Terbiasa bekerja secara mandiri maupun tim, serta mampu menggabungkan aspek teknis dan estetika dalam menghasilkan solusi digital yang fungsional dan terstruktur.
+</p>
 
-  <!-- PENDIDIKAN -->
-  <h3>PENDIDIKAN</h3>
-  <hr>
-  <table>
-    <tr>
-      <td>
-        Universitas Negeri Surabaya – Surabaya, Jawa Timur, Indonesia<br>
-        <i>S1 Teknik Informatika</i>
-      </td>
-      <td class="date">2024 – Sekarang</td>
-    </tr>
-    <tr>
-      <td>
-        SMA Islam As Sakinah – Sidoarjo, Jawa Timur, Indonesia<br>
-        <i>MIPA</i>
-      </td>
-      <td class="date">2021 – 2024</td>
-    </tr>
-  </table>
+<!-- ================= PENDIDIKAN ================= -->
+<h3>PENDIDIKAN</h3>
+<hr>
+<table>
+  <tr>
+    <td>
+      Universitas Negeri Surabaya – Surabaya, Jawa Timur<br>
+      <i>S1 Teknik Informatika</i>
+    </td>
+    <td class="date">2024 – Sekarang</td>
+  </tr>
+  <tr>
+    <td>
+      SMA Islam As Sakinah – Sidoarjo, Jawa Timur<br>
+      <i>MIPA</i>
+    </td>
+    <td class="date">2021 – 2024</td>
+  </tr>
+</table>
 
-  <!-- PENGALAMAN / PROYEK -->
+<!-- ================= PENGALAMAN ================= -->
 <h3>PENGALAMAN / PROYEK</h3>
 <hr>
 <table>
   <tr>
     <td>
       <strong>Desainer Grafis</strong><br>
-      <em>Toko Bangunan Sari Bumi Rejo – Sidoarjo, Jawa Timur, Indonesia</em><br>
-      Membuat berbagai materi promosi seperti poster, spanduk, dan konten digital untuk meningkatkan daya tarik pemasaran produk bangunan. 
-      Mengoptimalkan desain visual agar sesuai dengan identitas merek dan audiens target.
+      <em>Toko Bangunan Sari Bumi Rejo – Sidoarjo</em><br>
+      Mengembangkan berbagai materi visual seperti poster, banner, dan konten digital.
+      Bertanggung jawab memastikan desain konsisten dengan identitas visual serta mudah dipahami oleh pengguna.
     </td>
     <td class="date">2022 – Sekarang</td>
   </tr>
@@ -208,9 +250,9 @@
   <tr>
     <td>
       <strong>Desainer Grafis</strong><br>
-      <em>Komisi Pemilihan Umum – Sidoarjo, Jawa Timur, Indonesia</em><br>
-      Bertanggung jawab dalam pembuatan desain jadwal kegiatan dan sertifikat peserta. 
-      Mengelola tampilan visual agar selaras dengan citra profesional lembaga pemerintah.
+      <em>Komisi Pemilihan Umum – Sidoarjo</em><br>
+      Membuat desain jadwal kegiatan dan sertifikat resmi.
+      Menyesuaikan visual dengan standar formal dan kebutuhan institusi pemerintahan.
     </td>
     <td class="date">2023</td>
   </tr>
@@ -218,9 +260,9 @@
   <tr>
     <td>
       <strong>Desainer UI/UX</strong><br>
-      <em>Proyek Pribadi dan Kelompok (Studi Kasus)</em><br>
-      Mendesain dan membuat prototipe untuk platform dua aplikasi dan dua website. 
-      Setiap proyek dilengkapi dengan case study dan simulasi branding untuk meningkatkan daya tarik pengguna dan konsistensi identitas visual.
+      <em>Proyek Pribadi & Kelompok</em><br>
+      Merancang prototipe untuk aplikasi dan website menggunakan Figma.
+      Setiap proyek dilengkapi dengan studi kasus, alur pengguna, dan evaluasi desain.
     </td>
     <td class="date">2022 – Sekarang</td>
   </tr>
@@ -229,18 +271,8 @@
     <td>
       <strong>Ilustrator Karakter</strong><br>
       <em>Proyek Pribadi</em><br>
-      Membuat ilustrasi karakter untuk kebutuhan branding instansi. 
-      Fokus pada visual storytelling yang dapat memperkuat citra dan pesan brand.
-    </td>
-    <td class="date">2022 – Sekarang</td>
-  </tr>
-
-  <tr>
-    <td>
-      <strong>Freelance Desainer Grafis</strong><br>
-      <em>Proyek Sekolah dan UMKM</em><br>
-      Membuat poster, brosur, dan konten media sosial untuk promosi sekolah dan usaha kecil menengah. 
-      Mengadaptasi desain sesuai dengan kebutuhan klien dan audiens lokal.
+      Membuat ilustrasi karakter untuk kebutuhan identitas visual dan branding.
+      Fokus pada konsistensi gaya dan storytelling visual.
     </td>
     <td class="date">2022 – Sekarang</td>
   </tr>
@@ -248,16 +280,15 @@
   <tr>
     <td>
       <strong>Guru Desain Grafis</strong><br>
-      <em>SMP Islam As Sakinah – Sidoarjo, Jawa Timur, Indonesia</em><br>
-      Mengajar dasar-dasar desain grafis kepada siswa SMP dengan pendekatan interaktif. 
-      Mengembangkan materi pembelajaran seputar desain branding, promosi, dan pengenalan konsep UMKM untuk menumbuhkan kreativitas dan jiwa wirausaha pada peserta didik.
+      <em>SMP Islam As Sakinah – Sidoarjo</em><br>
+      Mengajar dasar-dasar desain grafis dan visual digital.
+      Membimbing siswa memahami konsep desain, kreativitas, dan penerapan visual secara praktis.
     </td>
     <td class="date">2024 – Sekarang</td>
   </tr>
-
 </table>
 
-<!-- ORGANISASI / KEGIATAN -->
+<!-- ================= ORGANISASI ================= -->
 <h3>ORGANISASI / KEGIATAN</h3>
 <hr>
 <table>
@@ -265,79 +296,53 @@
     <td>
       <strong>Member</strong><br>
       <em>Google Developer Group on Campus</em><br>
-      Aktif mengikuti kegiatan seminar dan workshop yang membahas teknologi terkini, UI/UX, serta desain digital. 
-      Berperan dalam berbagi wawasan mengenai desain promosi berbasis teknologi dan pengembangan aplikasi.
+      Aktif mengikuti seminar dan workshop seputar teknologi, UI/UX, dan pengembangan aplikasi.
     </td>
     <td class="date">2024 – Sekarang</td>
   </tr>
 
   <tr>
     <td>
-      <strong>Ketua Seksi Teknologi Informasi dan Komunikasi</strong><br>
-      <em>SMA Islam As Sakinah – Sidoarjo, Jawa Timur, Indonesia</em><br>
-      Mengelola kebutuhan desain dan dokumentasi digital di lingkungan sekolah. 
-      Bertanggung jawab atas pembuatan materi promosi, seperti poster PPDB, banner acara, dan konten media sosial.
-    </td>
-    <td class="date">2022 – 2023</td>
-  </tr>
-
-  <tr>
-    <td>
-      <strong>Member Ekstrakurikuler Multimedia</strong><br>
-      <em>SMA Islam As Sakinah – Sidoarjo, Jawa Timur, Indonesia</em><br>
-      Berkolaborasi dengan tim kreatif dalam produksi media visual sekolah. 
-      Terlibat dalam desain promosi kegiatan OSIS, thumbnail live streaming, dan dokumentasi acara.
+      <strong>Ketua Seksi TIK</strong><br>
+      <em>SMA Islam As Sakinah – Sidoarjo</em><br>
+      Mengelola dokumentasi dan kebutuhan visual digital sekolah.
     </td>
     <td class="date">2022 – 2023</td>
   </tr>
 </table>
 
+<!-- ================= SERTIFIKASI ================= -->
+<h3>SERTIFIKASI</h3>
+<hr>
+<ul>
+  <li>FIGMA for UI/UX Design – MySkill (2025)</li>
+  <li>Canva for Design – MySkill (2025)</li>
+  <li>Graphic Design Fundamental – MySkill (2025)</li>
+</ul>
 
-  <!-- SERTIFIKASI -->
-  <h3>SERTIFIKASI</h3>
-  <hr>
-  <ul>
-    <li>
-      Certificate of Skill Specialization: <strong>FIGMA FOR UI/UX DESIGN</strong> – MySkill E-Learning, 
-      UI-UX Research and Design Path, 22 hours (22 courses). Nomor: MS-16/2/2025-vRNGzPtbCbJwYht64mLq (2025)
-    </li>
-    <li>
-      Certificate of Skill Specialization: <strong>CANVA FOR DESIGN</strong> – MySkill E-Learning, 
-      Graphic Design Path, 10 hours (10 courses). Nomor: MS-1/2/2025-J5f4ZW7t7rXeHvDsY3XSC (2025)
-    </li>
-    <li>
-      Certificate of Skill Specialization: <strong>GRAPHIC DESIGN FUNDAMENTAL</strong> – MySkill E-Learning, 
-      Graphic Design Path, 17 hours (17 courses). Nomor: MS-31/1/2025-XdEyZTsOgCRVEfDbgwEb (2025)
-    </li>
-  </ul>
+<!-- ================= KEAHLIAN ================= -->
+<h3>KEAHLIAN</h3>
+<hr>
+<ul>
+  <li><strong>Soft Skills:</strong> Communication, Teamwork, Critical Thinking, Problem Solving</li>
+  <li><strong>Hard Skills:</strong> Graphic Design, UI/UX Design</li>
+  <li><strong>Tools:</strong> Figma, Canva, CorelDRAW, HTML, CSS</li>
+</ul>
 
-  <!-- KEAHLIAN -->
-  <h3>KEAHLIAN</h3>
-  <hr>
-  <ul>
-    <li><strong>Soft Skills:</strong> Communication, Teamwork, Public Speaking, Critical Thinking, Creative & Visual Imagination</li>
-    <li><strong>Hard Skills:</strong> Graphic Design & UI/UX Design</li>
-    <li><strong>Software:</strong> CorelDRAW, Canva, Figma, HTML, & CSS</li>
-  </ul>
+<!-- ================= BAHASA ================= -->
+<h3>BAHASA</h3>
+<hr>
+<ul>
+  <li>Bahasa Indonesia (Lancar)</li>
+  <li>Bahasa Inggris (Dasar)</li>
+</ul>
 
-  <!-- BAHASA -->
-  <h3>BAHASA</h3>
-  <hr>
-  <ul>
-    <li>Bahasa Indonesia (Ahli)</li>
-    <li>Bahasa Inggris (Dasar)</li>
-  </ul>
-
-  <script src="https://unpkg.com/aos@next/dist/aos.js"></script>
+<!-- ===== SCRIPT ===== -->
+    <script src="https://unpkg.com/aos@next/dist/aos.js"></script>
     <script>
         AOS.init();
     </script>
-    <script>
-      function closeTab() {
-        window.close();
-      }
-    </script>
-  <script src="script.js"></script>
+    <script src="script.js"></script>
 
 </body>
 </html>
