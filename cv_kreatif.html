@@ -119,6 +119,47 @@
       color: #60a5fa; /* setara blue-300 */
     }
 
+    .parent {
+  display: grid;
+  grid-template-columns: repeat(12, 1fr);
+  grid-template-rows: repeat(24, minmax(40px, auto));
+  gap: 8px;
+
+  /* 🔴 BORDER GRID UTAMA */
+  /* border: 2px dashed red;
+  padding: 8px; */
+}
+
+/* 🔵 BORDER SETIAP ITEM */
+.parent > div {
+  border: 1px solid blue;
+  padding: 12px;
+  border-radius: 15px;
+}
+
+/* ===== GRID LAYOUT ===== */
+
+/* 1. HEADER */
+.div1 { grid-area: 1 / 1 / 7 / 13; }
+
+/* 2. KONTAK (SIDEBAR KIRI) */
+.div2 { grid-area: 7 / 1 / 19 / 5; }
+
+/* 3–5. SKILLS */
+.div3 { grid-area: 7 / 5 / 10 / 7; }    /* Frontend */
+.div4 { grid-area: 7 / 7 / 10 / 9; }    /* Backend */
+.div5 { grid-area: 7 / 9 / 10 / 11; }   /* Database */
+.div6 { grid-area: 7 / 11 / 10 / 13; }  /* Tools tambahan */
+
+/* 6. PENGALAMAN */
+.div7 { grid-area: 10 / 5 / 19 / 10; }
+
+/* 7. TOOLS */
+.div8 { grid-area: 10 / 10 / 19 / 13; }
+
+/* 8. PROJECT */
+.div9 { grid-area: 19 / 1 / 25 / 13; }
+
     
   </style>
 </head>
@@ -156,8 +197,30 @@
   </div>
 </header>
 
-<p>COMING SOON</p>
-  
+<div class="parent">
+
+  <!-- 1. HEADER -->
+<div class="div1">Header</div>
+
+<!-- 2. KONTAK -->
+<div class="div2">KONTAK</div>
+
+<!-- 3–5. SKILLS -->
+<div class="div3">Desain Grafis</div>
+<div class="div4">UI/UX Design</div>
+<div class="div5">Ilustrator Karakter</div>
+<div class="div6">Front End</div>
+
+<!-- 6. PENGALAMAN -->
+<div class="div7">PENGALAMAN</div>
+
+<!-- 7. TOOLS -->
+<div class="div8">TOOLS</div>
+
+<!-- 8. PROJECT -->
+<div class="div9">PROJECT</div>
+
+</div>
 
   <script src="https://unpkg.com/aos@next/dist/aos.js"></script>
     <script>
