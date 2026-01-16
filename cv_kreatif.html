@@ -5,104 +5,38 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>CV - Muhammad Naufal Aziz</title>
   <link rel="stylesheet" href="style.css">
+
   <style>
     body {
       font-family: Arial, sans-serif;
       margin: 40px auto;
-      max-width: 800px;
+      max-width: 900px;
       padding-top: 120px;
       line-height: 1.6;
       color: #222;
       background-color: #fff;
     }
 
-    h1 {
-      text-align: center;
-      color: #000000;
-      padding-bottom: 6px;
-      margin-bottom: 10px;
-    }
-
-    .dark-mode h1 {
-      color: #ffffff;
-    }
-
-    p, li, td {
-      font-size: 14px;
-    }
-
-    .center {
-      text-align: center;
-    }
-
-    hr {
-      border: none;
-      border-top: 1px solid #000000;
-      margin: 6px 0 12px;
-    }
-
-    .dark-mode hr {
-      border-top: 1px solid #ffffff;
-    }
-
-    
-    table {
-      width: 100%;
-      border-collapse: collapse;
-    }
-
-    td {
-      vertical-align: top;
-      padding-bottom: 8px;
-    }
-
-    ul {
-      margin: 8px 0 8px 20px;
-    }
-
-    a {
-      color: #000000;
-      text-decoration: none;
-    }
-
-    .dark-mode a {
-      color: #ffffff;
-    }
-
-    .date {
-      text-align: right;
-      white-space: nowrap;
-    }
-
-    .note {
-      text-align: center;
-      font-size: 12px;
-      color: #000000;
-      margin-top: 5px;
-    }
-
-    /* =====================================================
-    🔹 HEADER
-  ===================================================== */
+    /* ================= HEADER ================= */
     .custom-header {
-    position: fixed;
-    top: 0;
-    left: 0;
-    width: 100%;
-    z-index: 999;
-    background: rgba(89, 159, 235, 0.17);
-    backdrop-filter: blur(12px);
-    -webkit-backdrop-filter: blur(30px);
-    box-shadow: 0 2px 10px rgba(0, 0, 0, 0.3);
+      position: fixed;
+      top: 0;
+      left: 0;
+      width: 100%;
+      z-index: 999;
+      background: rgba(89, 159, 235, 0.17);
+      backdrop-filter: blur(12px);
+      -webkit-backdrop-filter: blur(30px);
+      box-shadow: 0 2px 10px rgba(0, 0, 0, 0.3);
     }
 
     .header-container {
-    max-width: 1200px;
-    margin: 0 auto;
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
-    padding: 1.25rem 1.5rem;
+      max-width: 1200px;
+      margin: 0 auto;
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      padding: 1.25rem 1.5rem;
     }
 
     .header-center a {
@@ -112,126 +46,120 @@
       font-weight: 500;
       padding: 6px 12px;
       border-radius: 8px;
-      transition: color 0.3s ease, background 0.3s ease;
+      transition: color 0.3s ease;
     }
 
     .header-center a:hover {
-      color: #60a5fa; /* setara blue-300 */
+      color: #60a5fa;
     }
 
-    .parent {
-  display: grid;
-  grid-template-columns: repeat(12, 1fr);
-  grid-template-rows: repeat(24, minmax(40px, auto));
-  gap: 8px;
+    /* ================= GAMBAR CV ================= */
+    .cv-image {
+      width: 100%;
+    }
 
-  /* 🔴 BORDER GRID UTAMA */
-  /* border: 2px dashed red;
-  padding: 8px; */
-}
+    .cv-image img {
+      width: 90%;
+      height: auto;
+      display: block;
+      margin: 0 auto;
+      border-radius: 18px;
+      box-shadow: 0 20px 50px rgba(0, 0, 0, 0.25);
+    }
 
-/* 🔵 BORDER SETIAP ITEM */
-.parent > div {
-  border: 1px solid blue;
-  padding: 12px;
-  border-radius: 15px;
-}
+    /* ================= DOWNLOAD BUTTON ================= */
+    .download-cv {
+      position: fixed;
+      bottom: 24px;
+      right: 24px;
+      padding: 10px 16px;
+      font-size: 14px;
+      font-weight: 500;
+      border: none;
+      border-radius: 10px;
+      background-color: #60a5fa;
+      color: #fff;
+      cursor: pointer;
+      box-shadow: 0 8px 20px rgba(0,0,0,0.25);
+      transition: background 0.3s ease, transform 0.2s ease;
+      z-index: 1000;
+    }
 
-/* ===== GRID LAYOUT ===== */
+    .download-cv:hover {
+      background-color: #1d4ed8;
+      transform: translateY(-2px);
+    }
 
-/* 1. HEADER */
-.div1 { grid-area: 1 / 1 / 7 / 13; }
+    /* ================= PRINT SETTINGS ================= */
+    @media print {
+      .custom-header,
+      .download-cv {
+        display: none !important;
+      }
 
-/* 2. KONTAK (SIDEBAR KIRI) */
-.div2 { grid-area: 7 / 1 / 19 / 5; }
+      body {
+        margin: 0;
+        padding: 0;
+      }
 
-/* 3–5. SKILLS */
-.div3 { grid-area: 7 / 5 / 10 / 7; }    /* Frontend */
-.div4 { grid-area: 7 / 7 / 10 / 9; }    /* Backend */
-.div5 { grid-area: 7 / 9 / 10 / 11; }   /* Database */
-.div6 { grid-area: 7 / 11 / 10 / 13; }  /* Tools tambahan */
-
-/* 6. PENGALAMAN */
-.div7 { grid-area: 10 / 5 / 19 / 10; }
-
-/* 7. TOOLS */
-.div8 { grid-area: 10 / 10 / 19 / 13; }
-
-/* 8. PROJECT */
-.div9 { grid-area: 19 / 1 / 25 / 13; }
-
-    
+      .cv-image img {
+        box-shadow: none;
+        border-radius: 0;
+      }
+    }
   </style>
 </head>
 
 <body>
 
+  <!-- DOWNLOAD BUTTON -->
+  <button class="download-cv" onclick="window.print()">
+    Download CV (PDF)
+  </button>
+
+  <!-- HEADER -->
   <header class="custom-header">
-  <div class="header-container">
+    <div class="header-container">
 
-    <!-- KIRI -->
-    <div class="header-left">
-      <button class="back-btn" onclick="closeTab()" aria-label="Kembali">
-        <svg width="22" height="22" viewBox="0 0 24 24" fill="none"
-          xmlns="http://www.w3.org/2000/svg">
-          <path d="M15 18L9 12L15 6"
-            stroke="currentColor"
-            stroke-width="2"
-            stroke-linecap="round"
-            stroke-linejoin="round"/>
-        </svg>
-      </button>
+      <!-- KIRI -->
+      <div class="header-left">
+        <button class="back-btn" onclick="closeTab()" aria-label="Kembali">
+          <svg width="22" height="22" viewBox="0 0 24 24" fill="none"
+            xmlns="http://www.w3.org/2000/svg">
+            <path d="M15 18L9 12L15 6"
+              stroke="currentColor"
+              stroke-width="2"
+              stroke-linecap="round"
+              stroke-linejoin="round"/>
+          </svg>
+        </button>
+      </div>
+
+      <!-- TENGAH -->
+      <nav class="header-center">
+        <a href="cv_ats.html">CV ATS</a>
+        <a href="cv_kreatif.html">CV Kreatif</a>
+      </nav>
+
+      <!-- KANAN -->
+      <div class="header-right" id="toggleTheme">
+        <img id="themeIcon" src="dark mode.svg" alt="Toggle Theme">
+      </div>
+
     </div>
+  </header>
 
-    <!-- TENGAH -->
-    <nav class="header-center">
-      <a href="cv_ats.html" class="nav-link">CV ATS</a>
-      <a href="cv_kreatif.html" class="nav-link">CV Kreatif</a>
-    </nav>
-
-    <!-- KANAN -->
-    <div class="header-right" id="toggleTheme">
-      <img id="themeIcon" src="dark mode.svg" alt="Toggle Theme" class="bg-blue-400 p-1 rounded hover:bg-blue-500">
-    </div>
-
+  <!-- GAMBAR CV -->
+  <div class="cv-image">
+    <img src="gambar/CV kreatif.png" alt="CV Kreatif Muhammad Naufal Aziz">
   </div>
-</header>
 
-<div class="parent">
-
-  <!-- 1. HEADER -->
-<div class="div1">Header</div>
-
-<!-- 2. KONTAK -->
-<div class="div2">KONTAK</div>
-
-<!-- 3–5. SKILLS -->
-<div class="div3">Desain Grafis</div>
-<div class="div4">UI/UX Design</div>
-<div class="div5">Ilustrator Karakter</div>
-<div class="div6">Front End</div>
-
-<!-- 6. PENGALAMAN -->
-<div class="div7">PENGALAMAN</div>
-
-<!-- 7. TOOLS -->
-<div class="div8">TOOLS</div>
-
-<!-- 8. PROJECT -->
-<div class="div9">PROJECT</div>
-
-</div>
-
-  <script src="https://unpkg.com/aos@next/dist/aos.js"></script>
-    <script>
-        AOS.init();
-    </script>
-    <script>
-      function closeTab() {
-        window.close();
-      }
-    </script>
-  <script src="script.js"></script>
+  <!-- SCRIPT -->
+  <script>
+    function closeTab() {
+      window.close();
+    }
+  </script>
 
 </body>
 </html>
